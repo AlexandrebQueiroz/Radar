@@ -20,7 +20,7 @@ public class FragmentAbaB_Conversas extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,     Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.f1_aba_eventos, container, false);
+        return inflater.inflate(R.layout.f2_aba_conversas, container, false);
     }
 
 }

@@ -19,8 +19,8 @@ public class FragmentAbaC_Pessoas extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,     Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.f2_aba_conversas, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.f3_aba_pessoas, container,false);
     }
 
 }
