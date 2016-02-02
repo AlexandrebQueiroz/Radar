@@ -10,6 +10,8 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -20,6 +22,7 @@ import br.com.radar.activity.fragment.FragmentAbaB_Conversas;
 import br.com.radar.activity.fragment.FragmentAbaC_Pessoas;
 import br.com.radar.adpter.ViewPagerAdapter;
 import br.com.radar.radar.R;
+import br.com.radar.util.Typefaces;
 
 
 public class HomeActivity extends AppCompatActivity {
@@ -41,22 +44,20 @@ public class HomeActivity extends AppCompatActivity {
 
         setupFloatingActionButton();
         setupViewPagger();
-        setupTabLayout();
         setupTabIcons();
     }
 
-    private void setupViewPagger(){
+    private void setupViewPagger() {
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         adp = new ViewPagerAdapter(getSupportFragmentManager());
-        adp.addFragment(new FragmentAbaA_Eventos(), "Eventos");
-        adp.addFragment(new FragmentAbaB_Conversas(), "Conversas");
-        adp.addFragment(new FragmentAbaC_Pessoas(), "Pessoas");
+        adp.addFragment(new FragmentAbaA_Eventos(),"Eventos");
+        adp.addFragment(new FragmentAbaB_Conversas(), "e90b");
+        adp.addFragment(new FragmentAbaC_Pessoas(), "icon-headphones");
         viewPager.setAdapter(adp);
-    }
-
-    private void setupTabLayout(){
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
+
+        tabLayout.setTabTextColors(getResources().getColor(R.color.black), getResources().getColor(R.color.vermelho));
     }
 
     private void setupFloatingActionButton(){
@@ -91,19 +92,10 @@ public class HomeActivity extends AppCompatActivity {
 
             }
         }
-
-
     }
 
     private void setupTabIcons() {
 
-        try {
-            tabLayout.getTabAt(abaConversa).setIcon(R.drawable.ic_tab_radar);
-            tabLayout.getTabAt(abaPessoa).setIcon(R.drawable.ic_tab_people);
-            tabLayout.getTabAt(abaEvento).setIcon(R.drawable.ic_tab_calendar);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
     }
 }
 

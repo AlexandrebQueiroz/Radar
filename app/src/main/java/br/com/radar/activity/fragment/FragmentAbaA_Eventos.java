@@ -1,6 +1,7 @@
 package br.com.radar.activity.fragment;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -12,6 +13,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TabHost;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -22,6 +24,7 @@ import br.com.radar.dao.FeedItemDAO;
 import br.com.radar.intefaces.EndlessRecyclerOnScrollListener;
 import br.com.radar.model.FeedItem;
 import br.com.radar.radar.R;
+import br.com.radar.util.Typefaces;
 
 import static android.support.v7.widget.RecyclerView.*;
 
@@ -30,10 +33,17 @@ public class FragmentAbaA_Eventos extends Fragment {
     private int contadorPaginas;
 
     private View myView;
-    private List<FeedItem> movieList = new ArrayList<>();
     private RecyclerView recyclerView;
     private FeedItemAdpter mAdapter;
     private List<FeedItem> feedItemList = new ArrayList<>();
+
+    private TextView participar;
+    private TextView participarCounter;
+    private TextView adicionar;
+    private TextView messagem;
+    private TextView messagemCounter;
+    private TextView favorito;
+    private TextView favoritoCounter;
 
     public FragmentAbaA_Eventos() {
     }
@@ -48,10 +58,20 @@ public class FragmentAbaA_Eventos extends Fragment {
         myView  =  inflater.inflate(R.layout.f1_aba_eventos, container, false);
         contadorPaginas = 0;
         setupRecyclerView();
-
+        setupIcones();
         return myView;
     }
 
+    private void setupIcones(){
+
+        participar = (TextView) myView.findViewById(R.id.participar);
+        participarCounter = (TextView) myView.findViewById(R.id.participar_counter);
+        adicionar = (TextView) myView.findViewById(R.id.adicionar);
+        messagem = (TextView) myView.findViewById(R.id.messagem);
+        messagemCounter = (TextView) myView.findViewById(R.id.messagem_counter);
+        favorito = (TextView) myView.findViewById(R.id.favorito);
+        favoritoCounter = (TextView) myView.findViewById(R.id.favorito_counter);
+    }
     private void setupRecyclerView(){
 
         recyclerView = (RecyclerView) myView.findViewById(R.id.recycler_view);
@@ -79,14 +99,14 @@ public class FragmentAbaA_Eventos extends Fragment {
         recyclerView.setOnScrollListener(new EndlessRecyclerOnScrollListener(mLayoutManager) {
             @Override
             public void onLoadMore(int current_page) {
-                Toast.makeText(getActivity(), "Espere um momento", Toast.LENGTH_SHORT).show();
-               movieList.addAll(new FeedItemDAO().getItemList());
+               Toast.makeText(getActivity(), "Espere um momento", Toast.LENGTH_SHORT).show();
+                feedItemList.addAll(new FeedItemDAO().getItemList());
                mAdapter.notifyDataSetChanged();
             }
         });
 
         recyclerView.setAdapter(mAdapter);
-        movieList.addAll(new FeedItemDAO().getItemList());
+        feedItemList.addAll(new FeedItemDAO().getItemList());
         mAdapter.notifyDataSetChanged();
     }
 

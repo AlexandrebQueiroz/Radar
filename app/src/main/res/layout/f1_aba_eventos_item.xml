@@ -90,43 +90,75 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:padding="10dp"
             android:gravity="center_horizontal"
             android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="@dimen/icone_padrao"
-                android:layout_height="@dimen/icone_padrao"
-                android:layout_marginRight="@dimen/icone_padrao"
-                android:background="@drawable/ic_adicionar"
-                />
+            <TextView
+                android:id="@+id/participar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:textSize="@dimen/ic_tamanho_padrao"
+                android:paddingRight="3dp"
+                android:gravity="right"
+                android:text="@string/ic_ticket"/>
 
-            <ImageView
-                android:layout_width="@dimen/icone_padrao"
-                android:layout_height="@dimen/icone_padrao"
-                android:background="@drawable/ic_responder"
+            <TextView
+                android:id="@+id/participar_counter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:textSize="@dimen/ic_tamanho_padrao"
+                android:gravity="left"
+                android:text="10"/>
+
+            <TextView
+                android:id="@+id/adicionar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:textSize="@dimen/ic_tamanho_padrao"
+                android:text="@string/ic_adcionar"
                 />
 
             <TextView
-                android:layout_width="@dimen/icone_padrao"
-                android:layout_height="@dimen/icone_padrao"
-                android:layout_marginRight="@dimen/icone_padrao"
-                android:layout_gravity="center_vertical"
-                android:text="30"
-                />
-
-            <ImageView
-                android:layout_width="@dimen/icone_padrao"
-                android:layout_height="@dimen/icone_padrao"
-                android:background="@drawable/ic_favorito"
-                />
+                android:id="@+id/messagem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:paddingRight="3dp"
+                android:paddingLeft="3dp"
+                android:gravity="right"
+                android:text="@string/ic_grupo"/>
 
             <TextView
-                android:layout_width="@dimen/icone_padrao"
-                android:layout_height="@dimen/icone_padrao"
-                android:layout_gravity="center_vertical"
-                android:text="21"
-                />
+                android:id="@+id/messagem_counter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:textSize="@dimen/ic_tamanho_padrao"
+                android:gravity="left"
+                android:text="5"/>
 
+            <TextView
+                android:id="@+id/favorito"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:paddingRight="3dp"
+                android:paddingLeft="3dp"
+                android:gravity="right"
+                android:text="@string/ic_favorito"/>
+
+            <TextView
+                android:id="@+id/favorito_counter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:textSize="@dimen/ic_tamanho_padrao"
+                android:gravity="left"
+                android:text="7"/>
 
         </LinearLayout>
     </LinearLayout>

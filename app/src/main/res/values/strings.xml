@@ -17,5 +17,6 @@
     <string name="title_activity_deletar">deletarActivity</string>
     <string name="titulo">Titulo</string>
     <string name="ano">Ano</string>
-     <string name="title_activity_detalhe_imagem">detalhe_imagem</string>
-</resources>
+    <string name="title_activity_detalhe_imagem">detalhe_imagem</string>
+
+ </resources>

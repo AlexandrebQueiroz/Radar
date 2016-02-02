@@ -5,15 +5,12 @@ import java.util.List;
 
 import br.com.radar.model.FeedItem;
 
-/**
- * Created by Alexandre on 31/01/2016.
- */
 public class FeedItemDAO {
 
     public  List<FeedItem> getItemList(){
 
         List<FeedItem> itemList = new ArrayList<>();
-        FeedItem item0 = new FeedItem(1, "Alexandre" ,null, "Eu vou pra o sfrega, quem quiser saber mais clica aqui. ingresso em promoção.", null, "Agora mesmo", "playstore.com.br/radarsocial");
+        FeedItem item0 = new FeedItem(1, "e900" ,null, "Eu vou pra o sfrega, quem quiser saber mais clica aqui. ingresso em promoção.", null, "Agora mesmo", "playstore.com.br/radarsocial");
         FeedItem item1 = new FeedItem(2, "Alexandre" ,null, "O radar esta Online", null, "poucos instantes", "www.radar.com.br");
         FeedItem item2 = new FeedItem(3, "Alexandre" ,null, "tem um monte de coisa aqui, veem tambem!", null, "Um hora atras", "www.radar.com.br");
         FeedItem item3 = new FeedItem(4, "Alexandre" ,null, "O que estará acontecendo de bom hoje?", null, "Varias Horas atras", "www.radar.com.br");

@@ -18,7 +18,7 @@
     <style name="MyMaterialTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
-        <item name="colorPrimary">#ffffff</item>
+        <item name="colorPrimary">#b9b8b8</item>
         <item name="colorPrimaryDark">@color/colorAccent</item>
         <item name="colorAccent">#ff0000</item>
     </style>

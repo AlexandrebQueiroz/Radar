@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="ic_ticket">&#xe939;</string>
+    <string name="ic_adcionar">&#xe973;</string>
+
+    <string name="ic_favorito">&#xe9da;</string>
+    <string name="ic_grupo">&#xea58;</string>
+
+
+    <string name="ic_home">&#xe900;</string>
+    <string name="ic_office">&#xe903;</string>
+    <string name="ic_droplet">&#xe90b;</string>
+    <string name="ic_music">&#xe911;</string>
+    <string name="ic_delete">&#xe916;</string>
+
+
+</resources>
