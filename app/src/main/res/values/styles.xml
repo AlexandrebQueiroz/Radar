@@ -1,52 +1,27 @@
 <resources>
 
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-    </style>
+
+
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-
-    <!--Material vermelho -->
     <style name="MyMaterialTheme" parent="MyMaterialTheme.Base" />
     <style name="MyMaterialTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
-        <item name="colorPrimary">#b9b8b8</item>
-        <item name="colorPrimaryDark">@color/colorAccent</item>
-        <item name="colorAccent">#ff0000</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
     </style>
+
     <style name="MyMaterialTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
     <style name="MyMaterialTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
-
-
-    <!--Material azul -->
-    <style name="MaterialThemeAzul" parent="MyMaterialTheme.Base" />
-    <style name="MaterialThemeAzul.Base" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="windowNoTitle">true</item>
-        <item name="windowActionBar">false</item>
-        <item name="colorPrimary">#ffffff</item>
-        <item name="colorPrimaryDark">#e3f2fd</item>
-        <item name="colorAccent">#2196f3</item>
-    </style>
-
-    <!-- Material verde-->
-    <style name="MaterialThemeVerde" parent="MyMaterialTheme.Base" />
-    <style name="MyMaterialThemeVerde.Base" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="windowNoTitle">true</item>
-        <item name="windowActionBar">false</item>
-        <item name="colorPrimary">#ffffff</item>
-        <item name="colorPrimaryDark">#b2dfdb</item>
-        <item name="colorAccent">#009688</item>
-    </style>
-
-
-
 
 </resources>

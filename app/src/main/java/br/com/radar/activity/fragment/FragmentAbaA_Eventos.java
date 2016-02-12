@@ -1,7 +1,6 @@
 package br.com.radar.activity.fragment;
 
 import android.content.Context;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -12,7 +11,6 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TabHost;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,9 +20,8 @@ import java.util.List;
 import br.com.radar.adpter.FeedItemAdpter;
 import br.com.radar.dao.FeedItemDAO;
 import br.com.radar.intefaces.EndlessRecyclerOnScrollListener;
-import br.com.radar.model.FeedItem;
+import br.com.radar.model.Post;
 import br.com.radar.radar.R;
-import br.com.radar.util.Typefaces;
 
 import static android.support.v7.widget.RecyclerView.*;
 
@@ -35,7 +32,7 @@ public class FragmentAbaA_Eventos extends Fragment {
     private View myView;
     private RecyclerView recyclerView;
     private FeedItemAdpter mAdapter;
-    private List<FeedItem> feedItemList = new ArrayList<>();
+    private List<Post> feedItemList = new ArrayList<>();
 
     private TextView participar;
     private TextView participarCounter;
@@ -72,6 +69,8 @@ public class FragmentAbaA_Eventos extends Fragment {
         favorito = (TextView) myView.findViewById(R.id.favorito);
         favoritoCounter = (TextView) myView.findViewById(R.id.favorito_counter);
     }
+
+
     private void setupRecyclerView(){
 
         recyclerView = (RecyclerView) myView.findViewById(R.id.recycler_view);

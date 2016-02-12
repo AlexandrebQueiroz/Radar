@@ -1,12 +1,8 @@
- <resources>
+<resources>
     <string name="app_name">Radar</string>
     <string name="action_settings">Settings</string>
 
 
-    <string name="lbl_you_are_at">YOU ARE AT</string>
-    <string name="btn_get_location">GET MY LOCATION</string>
-    <string name="btn_start_location_updates">START LOCATION UPDATES</string>
-    <string name="btn_stop_location_updates">STOP LOCATION UPDATES</string>
     <string name="one">Aba Um</string>
     <string name="tree">Aba Três</string>
     <string name="two">Aba Dois</string>
@@ -18,5 +14,9 @@
     <string name="titulo">Titulo</string>
     <string name="ano">Ano</string>
     <string name="title_activity_detalhe_imagem">detalhe_imagem</string>
+    <string name="title_activity_menu">MenuActivity</string>
 
- </resources>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+</resources>

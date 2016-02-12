@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.radar.model.FeedItem;
+import br.com.radar.model.Post;
 
 public class FeedItemDAO {
 
@@ -34,6 +35,7 @@ public class FeedItemDAO {
 
         return itemList;
     }
+
 
 
 }
