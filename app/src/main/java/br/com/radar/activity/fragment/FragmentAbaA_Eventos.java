@@ -20,6 +20,7 @@ import java.util.List;
 import br.com.radar.adpter.FeedItemAdpter;
 import br.com.radar.dao.FeedItemDAO;
 import br.com.radar.intefaces.EndlessRecyclerOnScrollListener;
+import br.com.radar.model.FeedItem;
 import br.com.radar.model.Post;
 import br.com.radar.radar.R;
 
@@ -32,7 +33,7 @@ public class FragmentAbaA_Eventos extends Fragment {
     private View myView;
     private RecyclerView recyclerView;
     private FeedItemAdpter mAdapter;
-    private List<Post> feedItemList = new ArrayList<>();
+    private List<FeedItem> feedItemList = new ArrayList<>();
 
     private TextView participar;
     private TextView participarCounter;
