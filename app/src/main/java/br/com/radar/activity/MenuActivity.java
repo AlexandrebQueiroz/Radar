@@ -1,13 +1,16 @@
 package br.com.radar.activity;
 
+
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
+
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -31,36 +34,24 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
     private TextView textoPerfil;
     private TextView codPerfil;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_activity);
 
-        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        //setSupportActionBar(toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        //ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        //drawer.setDrawerListener(toggle);
-        //toggle.syncState();
 
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
         iniciarElementosTela();
         setupViewPagger();
+
     }
-
-    private void setupFloatingActionButton(){
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-    }
-
 
 
     private void iniciarElementosTela() {
@@ -98,11 +89,12 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
         });
     }
 
+
     private void setupViewPagger() {
         viewPager = (ViewPager) findViewById(R.id.viewpager);
 
         adp = new ViewPagerAdapter(getSupportFragmentManager());
-        adp.addFragment(new FragmentAbaA_Eventos(),"Eventos");
+        adp.addFragment(new FragmentAbaA_Eventos(), "Eventos");
         adp.addFragment(new FragmentAbaB_Conversas(), "e90b");
         adp.addFragment(new FragmentAbaC_Pessoas(), "icon-headphones");
 
@@ -150,5 +142,6 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
 
 }

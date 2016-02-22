@@ -7,9 +7,6 @@ import android.widget.Toast;
 
 import br.com.radar.radar.R;
 
-/**
- * Created by Alexandre on 31/01/2016.
- */
 public class DetalheItem extends AppCompatActivity {
 
     private ImageView fotoItemDetalhe;
@@ -22,10 +19,6 @@ public class DetalheItem extends AppCompatActivity {
         if (savedInstanceState.getString("ENDERECO_IMAGEM") != null) {
 
             Toast.makeText(this,savedInstanceState.getString("ENDERECO_IMAGEM"), Toast.LENGTH_SHORT ).show();
-            /*
-            fotoItemDetalhe = (ImageView) findViewById(R.id.foto_detalhe);
-            fotoItemDetalhe.setImageBitmap(BitmapFactory.decodeFile(savedInstanceState.getString("ENDERECO_IMAGEM")));
-             */
         }
     }
 }
